@@ -1,0 +1,38 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Exercicio Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+
+jobs:
+  job1:
+    name: job1 ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    - name: Data atual
+      run: date
+  job2:
+    name: job2 windows
+    runs-on: windows-latest
+    steps:
+    - name: Data atual
+      run: get-date
+  job3:
+    name: job3 macos
+    runs-on: macos-latest
+    steps:
+    - name: Data atual
+      run: date
+  job4:
+    name: job4 final
+    runs-on: ubuntu-latest
+    needs: [job1, job2, job3]
+    steps:
+    - name: Data atual
+      run: date
