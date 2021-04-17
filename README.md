@@ -1,3 +1,5 @@
+[![GitHub Super-Linter](https://github.com/paahparadela/local-library-turma-alpha/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 # local-library - final project
 
 ## Creating the local project
