@@ -63,6 +63,8 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
       
     - name: Login Heroku
       uses: akhileshns/heroku-deploy@v3.10.9
