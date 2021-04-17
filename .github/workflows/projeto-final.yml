@@ -3,8 +3,6 @@ name: CI Projeto Final
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
     
 env:
@@ -78,7 +76,7 @@ jobs:
         heroku config:set MONGODB_URI=${{ env.DB_URI }}
     
     - name: Push code to Heroku
-      run: git push -f heroku
+      run: git push heroku main
     
   deploy-prod:
     name: Deploy Produção
@@ -112,4 +110,4 @@ jobs:
         heroku config:set MONGODB_URI=${{ env.DB_URI }}
     
     - name: Push code to Heroku
-      run: git push -f heroku
+      run: git push heroku main
