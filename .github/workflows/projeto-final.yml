@@ -78,7 +78,7 @@ jobs:
         heroku config:set MONGODB_URI=${{ env.DB_URI }}
     
     - name: Push code to Heroku
-      run: git push heroku main:main
+      run: git push -f heroku
     
   deploy-prod:
     name: Deploy Produção
@@ -112,4 +112,4 @@ jobs:
         heroku config:set MONGODB_URI=${{ env.DB_URI }}
     
     - name: Push code to Heroku
-      run: git push heroku main:main
+      run: git push -f heroku
