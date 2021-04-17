@@ -8,7 +8,6 @@ on:
   workflow_dispatch:
     
 env:
-  FILE_NAME: "Artefato"
   NODE_VERSION: "14.x"
 
 jobs:
@@ -18,12 +17,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-        
-    - name: Upload
-      uses: actions/upload-artifact@v2.2.2
-      with:
-        name: ${{ env.FILE_NAME }}
-        path: .
         
     - name: Set up Node.js version
       uses: actions/setup-node@v1
@@ -100,12 +93,12 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.10.9
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: paloma-local-library
+        heroku_app_name: paloma-local-library-prod
         heroku_email: paloma_paradel@hotmail.com
         justlogin: true
     
     - name: Set Heroku remote
-      run: heroku git:remote -a paloma-local-library
+      run: heroku git:remote -a paloma-local-library-prod
       
     - name: Set env variables
       run: |
