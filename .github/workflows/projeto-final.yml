@@ -2,7 +2,7 @@ name: CI Projeto Final
 
 on:
   push:
-    branches: [ no-branch ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
