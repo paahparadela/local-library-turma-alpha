@@ -5,6 +5,7 @@ on:
     branches: [ no-branch ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
     
 env:
   FILE_NAME: "Artefato"
