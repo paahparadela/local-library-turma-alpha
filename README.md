@@ -1,4 +1,4 @@
-# local-library
+# local-library - final project
 
 ## Creating the local project
 
