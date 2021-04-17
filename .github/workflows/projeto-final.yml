@@ -78,7 +78,9 @@ jobs:
         heroku config:set MONGODB_URI=${{ env.DB_URI }}
     
     - name: Push code to Heroku
-      run: git push -f heroku
+      run: |
+        heroku create --remote heroku
+        git push heroku main
     
   deploy-prod:
     name: Deploy Produção
