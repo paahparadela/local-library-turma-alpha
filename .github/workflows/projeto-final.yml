@@ -78,7 +78,7 @@ jobs:
         heroku config:set MONGODB_URI=${{ env.DB_URI }}
     
     - name: Push code to Heroku
-      run: git push heroku paloma-local-library-hom
+      run: git push heroku main:main
     
   deploy-prod:
     name: Deploy Produção
