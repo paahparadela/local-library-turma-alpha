@@ -63,12 +63,12 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.10.9
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: paloma-local-library
+        heroku_app_name: paloma-local-library-hom
         heroku_email: paloma_paradel@hotmail.com
         justlogin: true
     
     - name: Set Heroku remote
-      run: heroku git:remote -a paloma-local-library
+      run: heroku git:remote -a paloma-local-library-hom
       
     - name: Set env variables
       run: |
